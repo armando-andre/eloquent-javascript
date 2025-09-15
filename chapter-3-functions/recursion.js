@@ -1,7 +1,7 @@
 // Recursion
 // Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
 
-function isEven(userInput) {
+const isEven = (userInput) => {
   if (userInput < 0) {
     return;
   }
@@ -13,4 +13,4 @@ function isEven(userInput) {
   } else {
     return isEven(userInput - 2);
   }
-}
+};
