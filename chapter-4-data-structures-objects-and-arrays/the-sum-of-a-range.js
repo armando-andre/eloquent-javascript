@@ -6,16 +6,14 @@
 // If no step is given, the elements should go up by increments of one, corresponding to the old behavior.
 // The function call range(1, 10, 2) should return [1, 3, 5, 7, 9]. Make sure this also works with negative step values so that range(5, 2, -1) produces [5, 4, 3, 2].
 
-function range(start, end, step = 1) {
-  const result = [];
+function range(start, end, step = start < end ? 1 : -1) {
+  const array = [];
 
-  if (step === 0) return result;
-
-  for (; start <= end; step < 0 ? start++ : (start += step)) {
-    step < 0 ? result.unshift(start) : result.push(start);
+  for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
+    array.push(i);
   }
 
-  return result;
+  return array;
 }
 
 const sum = (numbers) => numbers.reduce((total, number) => total + number, 0);
