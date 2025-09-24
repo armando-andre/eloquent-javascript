@@ -8,6 +8,6 @@ function every(array, test) {
   return true;
 }
 
-function every(array, test) {
+function every(array) {
   return array.some((element) => element);
 }
