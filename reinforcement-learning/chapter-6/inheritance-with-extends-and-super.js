@@ -3,3 +3,32 @@
 // The Dog constructor should also take a name. It must call super(name) to pass the name to the Animal constructor.
 // Add a bark method to the Dog class that prints "Woof!".
 // Create an instance of Dog. Check that you can call both the eat method (from Animal) and the bark method (from Dog).
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    return this.name + " is eating.";
+  }
+}
+
+class Dog extends Animal {
+  #name;
+
+  constructor(name) {
+    super(name);
+    this.#name = name;
+  }
+
+  bark() {
+    return "Woof!";
+  }
+}
+
+const animal = new Animal("Tobby");
+const dog = new Dog("Tobby");
+
+console.log(animal.eat());
+console.log(dog.bark());
