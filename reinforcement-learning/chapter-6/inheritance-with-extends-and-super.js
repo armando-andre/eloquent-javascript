@@ -10,25 +10,21 @@ class Animal {
   }
 
   eat() {
-    return this.name + " is eating.";
+    console.log(this.name + " is eating.");
   }
 }
 
 class Dog extends Animal {
-  #name;
-
   constructor(name) {
     super(name);
-    this.#name = name;
   }
 
   bark() {
-    return "Woof!";
+    console.log("Woof!");
   }
 }
 
-const animal = new Animal("Tobby");
 const dog = new Dog("Tobby");
 
-console.log(animal.eat());
-console.log(dog.bark());
+dog.eat();
+dog.bark();
