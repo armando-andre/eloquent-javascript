@@ -9,8 +9,8 @@
 function range(start, end, step = start < end ? 1 : -1) {
   const array = [];
 
-  for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
-    array.push(i);
+  for (; step > 0 ? start <= end : start >= end; start += step) {
+    array.push(start);
   }
 
   return array;
